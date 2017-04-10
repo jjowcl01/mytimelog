@@ -1,0 +1,2 @@
+# mytimelog
+Mini Project
