@@ -11,10 +11,10 @@
 		$scope.timelog = {};
 
 		$scope.addTimelog = function(timelog){
-		if (confirm('Are you sure you want to add this timelog?')) {
-   	$scope.timelogs.push(timelog);
-			$scope.timelog = {};
-		}
+			if (confirm('Are you sure you want to add this timelog?')) {
+		   		$scope.timelogs.push(timelog);
+				$scope.timelog = {};
+			}
 
 		}
 
@@ -29,21 +29,17 @@
 			$scope.timelog = {};
 		}
 
-		   $scope.cancelTimelog = function() {
+		$scope.cancelTimelog = function() {
 		   	$scope.editId = undefined;
       		$scope.timelog = {};
-    }
+    	}
     
 
 		$scope.deleteTimelog = function(index){
-		if (confirm('Are you sure you want to delete this timelog?')) {
-     	$scope.timelogs.splice(index,1);
-}
-}
-	/*	    $scope.complete = function(index){
-    		$("#project-key").autocomplete({
-      		source: $scope.timelogs
-    });
-    } */
+			if (confirm('Are you sure you want to delete this timelog?')) {
+     			$scope.timelogs.splice(index,1);
+			}
+		}
+
 	}]);
 })();
